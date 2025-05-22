@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    font-family: 'Open Sans', sans-serif;
+    margin: 10px;
+    display: flex;
+    border-radius: 15px;
+    background-color: rgba(133, 65, 65, 0.2);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 5px 10px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+
+}
+
+ul img {
+    height: 45px;
+}
+
+ul li {
+    list-style: none;
+}
+
+.snd {
+    width: 100vw;
+    display: flex;
+    justify-content: end;
+    margin-right: 20px;
+}
+
+.snd li {
+    margin-right: 10px;
+    padding: 14px 16px;
+}
+
+.fst {
+    margin-left: 20px;
+}
+
+.fst li {
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    scroll-behavior: smooth;
+    background-image: url(https://www.awxcdn.com/adc-assets/images/hero/2/1440x450.jpg);
+    background-repeat: no-repeat;
+    background-size: 2050px;
+}
+
+#home {
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+main {
+    transform: translateY(-70px);
+    display: grid;
+    justify-items: center;
+}
+
+#weather {
+    width: 320px;
+    height: 37px;
+    border-radius: 5px;
+    border: none;
+}
+
+#home p {
+    margin-bottom: 20px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    height: 40px;
+    width: 350px;
+    padding-left: 7px;
+    border-radius: 10px;
+}
+
+.search svg {
+    transform: translateY(5px);
+}
+
+input:focus {
+    outline: none;
+    border: none;
+}
+
+.box {
+    background-color: white;
+    height: 350px;
+    width: 630px;
+    margin-top: 40px;
+}
+
+.current {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: rgb(148, 146, 146);
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.time {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: 450px;
+    font-family: "Bebas Neue", sans-serif;
+}
+
+.times {
+    display: flex;
+}
+
+.realwea {
+    display: flex;
+    justify-content: space-around;
+    height: auto;
+    align-items: center;
+}
+
+.temp {
+    width: 315px;
+    display: grid;
+    height: 320px;
+    padding-left: 10px;
+    grid-template-columns: 1fr 1fr;
+}
+
+.wind {
+    height: 320px;
+    width: 315px;
+}
+
+#temperature {
+    font-family: "Merriweather", serif;
+    font-size: 40px;
+    transform: translateX(-95px);
+}
+
+.index {
+    font-size: 13px;
+    font-family: "Merriweather", serif;
+}
+
+.index hr{
+    margin-top: -5px;
+    color: rgb(255, 255, 255);
+}
+
+.indi{
+    display: flex; 
+    justify-content: space-between;
+}
