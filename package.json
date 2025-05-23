@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  },
+  "name": "weather-reporter",
+  "version": "1.0.0",
+  "description": "It shows weather.",
+  "main": "server.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustAHuman14/Weather-Reporter.git"
+  },
+  "author": "JustAHuman",
+  "license": "MIT"
+}
