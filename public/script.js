@@ -18,74 +18,95 @@ document.querySelector('#weather').addEventListener('keydown', (e) => {
             weatherBox.style.display = 'block'
             document.querySelector('#temperature').innerHTML = `${Math.round(value.current.temp_c)}°<span style="font-size: 20px; color: rgb(139, 134, 134);" class="temperature">C</span>`
 
+            let uv = `${Math.round(value.current.uv)}`
+            if (uv >= 0 && uv <= 2) {
+                uv = `${Math.round(value.current.uv)} Low`
+            } else if (uv >= 3 && uv <= 5) {
+                uv = `${Math.round(value.current.uv)} Moderate`
+            } else if (uv >= 6 && uv <= 7) {
+                uv = `${Math.round(value.current.uv)} High`
+            } else if (uv >= 8 && uv <= 10) {
+                uv = `${Math.round(value.current.uv)} Very High`
+            } else if (uv >= 11) {
+                uv = `${Math.round(value.current.uv)} Extreme`
+            }
+            document.querySelector('.uv').innerHTML = uv
+            let win = `${Math.round(value.current.wind_kph)}`
+            
+            document.querySelector('.win').innerHTML = `${win} kmph`
+
+            let gust = `${Math.round(value.current.gust_kph)}`
+
+             document.querySelector('.gust').innerHTML = `${gust} kmph`
+
+             let humid = value.current.humidity
+
+             document.querySelector('.humid').innerHTML = `${humid}%`
 
             // If weather is overcast
             if (value.current.condition.text == "Overcast") {
                 document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/night/122.png" alt="cloudy" width="62" height="62">`
                 typeOf.innerHTML = 'Overcast'
-                console.log(value)
             }
 
             // If weather is Sunny
             else if (value.current.condition.text === "Sunny") {
                 document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/day/113.png" alt="sunny" width="62" height="62">`
-                console.log(value)
                 typeOf.innerHTML = 'Sunny'
             }
 
             // If weather is clear
             else if (value.current.condition.text === "Clear") {
                 document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/night/113.png" alt="clear" width="62" height="62">`
-                console.log(value)
                 typeOf.innerHTML = 'Clear'
             }
 
             // If weather is partly cloudy
             else if (value.current.condition.text === "Partly cloudy") {
                 document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="partly cloudy" width="62" height="62">`
-                console.log(value)
                 typeOf.innerHTML = 'Partly Cloudy'
             }
             else if (value.current.condition.text === "Partly Cloudy") { //The API i am using has mistakenly written 'C' in capital
                 document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/day/116.png" alt="partly cloudy" width="62" height="62">`
-                console.log(value)
                 typeOf.innerHTML = 'Partly Cloudy'
             }
 
             // If weather is misty
             else if (value.current.condition.text === "Mist") {
                 document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/day/143.png" alt="misty" width="62" height="62">`
-                console.log(value)
                 typeOf.innerHTML = 'Misty'
             }
 
             // Light rain
             else if (value.current.condition.text === "Light rain shower") {
                 document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/day/353.png" alt="light rain" width="62" height="62">`
-                console.log(value)
                 typeOf.innerHTML = 'Light Rain'
             }
 
             // Moderate rain
             else if (value.current.condition.text === "Moderate rain") {
                 document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/day/302.png" alt="light rain" width="62" height="62">`
-                console.log(value)
                 typeOf.innerHTML = 'Moderate Rain'
             }
 
             // Patchy Light rain with thunder
             else if (value.current.condition.text === "Patchy light rain with thunder") {
                 document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/day/386.png" alt="light rain" width="62" height="62">`
-                console.log(value)
                 typeOf.innerHTML = 'Light Rain With Thunder'
             }
 
             // Light Drizzle
             else if (value.current.condition.text === "Light drizzle") {
                 document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/day/266.png" alt="light rain" width="62" height="62">`
-                console.log(value)
                 typeOf.innerHTML = 'Light Drizzle'
             }
+
+            // Patch rain nearby
+            else if (value.current.condition.text === "Patchy rain nearby") {
+                document.querySelector('.cloud').innerHTML = `<img src="https://cdn.weatherapi.com/weather/64x64/day/176.png" alt="light rain" width="62" height="62">`
+                typeOf.innerHTML = 'Patchy Rain Nearby'
+            }
+
         })
 }
 )
