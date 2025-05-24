@@ -12,7 +12,7 @@ let typeOf = document.querySelector('.typeof')
 weatherBox.style.display = 'none'
 
 city.addEventListener('keydown', (e) => {
-    if (e.code === "Enter")
+    if (e.code == "Enter")
         weather(city.value).then((value) => {
             document.querySelector('.feel').innerHTML = `Feels Like ${Math.round(value.current.feelslike_c)}°C`
             document.querySelector('.cloud').innerHTML = `<img src="https:${value.current.condition.icon}" alt="cloudy" width="62" height="62">`
