@@ -65,10 +65,11 @@ a {
 
 body {
     scroll-behavior: smooth;
-    background-image: url(https://www.awxcdn.com/adc-assets/images/hero/2/1440x450.jpg);
     background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
+     background-size: cover;
+  background-position: center;
+  transition: background-image 1s ease-in-out;
+    height: 99vh;
 }
 
 #home {
@@ -180,4 +181,8 @@ input:focus {
 .indi{
     display: flex; 
     justify-content: space-between;
+}
+
+.typeof{
+    width: 200px;
 }
