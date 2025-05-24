@@ -66,10 +66,9 @@ a {
 body {
     scroll-behavior: smooth;
     background-repeat: no-repeat;
-     background-size: cover;
-  background-position: center;
-  transition: background-image 1s ease-in-out;
-    height: 99vh;
+    background-size: cover;
+    background-position: center;
+    height: 98vh;
 }
 
 #home {
@@ -173,16 +172,20 @@ input:focus {
     font-family: "Merriweather", serif;
 }
 
-.index hr{
+.index hr {
     margin-top: -5px;
     color: rgb(255, 255, 255);
 }
 
-.indi{
-    display: flex; 
+.indi {
+    display: flex;
     justify-content: space-between;
 }
 
-.typeof{
+.typeof {
     width: 200px;
+}
+
+.click:hover{
+    cursor: pointer;
 }
