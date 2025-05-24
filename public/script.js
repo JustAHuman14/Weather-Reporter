@@ -185,23 +185,3 @@ function date() {
 setInterval(() => {
     document.querySelector('.time').innerHTML = date()
 }, 1000)
-
-setInterval(() => {
-    let dates = new Date()
-    let hour = dates.getHours()
-    let minute = dates.getMinutes()
-    let time = hour * 60 + minute
-
-    let body = document.body
-    if (time >= 300 && time <= 390) {
-        body.style.backgroundImage = "url('https://thumbs.dreamstime.com/b/gorgeous-panorama-twilight-sky-cloud-morning-background-image-219446233.jpg')"
-    } else if (time > 390 && time <= 540) {
-        body.style.backgroundImage = "url('https://thumbs.dreamstime.com/b/early-morning-sky-scene-background-82859739.jpg')"
-    } else if (time > 540 && time <= 1020) {
-        body.style.backgroundImage = "url('https://wallpaperaccess.com/full/398927.jpg')"
-    } else if (time > 1020 && time <= 1050) {
-        body.style.backgroundImage = "url('https://th.bing.com/th/id/R.29a46ef58d5d8ac7c8bf28d81402c013?rik=BgDMX7fvWNd%2fXw&riu=http%3a%2f%2faneyeonyouproduction.com%2fuploads%2f3%2f5%2f4%2f3%2f35438268%2fimg2-10-20-4644-45-46-47-48-49-50-balancer_orig.jpg&ehk=saWx%2bQ%2fbwJQBwLc12z5dx9PpkxawerNXoTg8xj6olXg%3d&risl=&pid=ImgRaw&r=0')"
-    } else if (time > 1050 && time <= 1080) {
-        body.style.backgroundImage = "url('https://img.freepik.com/free-photo/sunset-sky_74190-4493.jpg?semt=ais_hybrid&w=740')"
-    }
-}, 1000);
