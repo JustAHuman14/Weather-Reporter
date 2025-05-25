@@ -11,13 +11,17 @@ let typeOf = document.querySelector('.typeof')
 
 weatherBox.style.display = 'none'
 
-city.addEventListener('keydown', (e) => {
-    if (e.code == "Enter")
+document.querySelector('#search').addEventListener('click', () => {
         weather(city.value).then((value) => {
-            document.querySelector('.feel').innerHTML = `Feels Like ${Math.round(value.current.feelslike_c)}°C`
-            document.querySelector('.cloud').innerHTML = `<img src="https:${value.current.condition.icon}" alt="cloudy" width="62" height="62">`
+            if (!city.value) {
+                weatherBox.style.display = 'none'
+                alert('Enter city or region name!')
+            } else {
+                
+                weatherBox.style.display = 'block'
+                document.querySelector('.feel').innerHTML = `Feels Like ${Math.round(value.current.feelslike_c)}°C`
+                document.querySelector('.cloud').innerHTML = `<img src="https:${value.current.condition.icon}" alt="cloudy" width="62" height="62">`
             typeOf.innerHTML = value.current.condition.text
-            weatherBox.style.display = 'block'
             document.querySelector('#temperature').innerHTML = `${Math.round(value.current.temp_c)}°<span style="font-size: 20px; color: rgb(139, 134, 134);" class="temperature">C</span>`
 
             let uv = `${Math.round(value.current.uv)}`
@@ -88,20 +92,25 @@ city.addEventListener('keydown', (e) => {
             else if (value.current.condition.text === "Patchy rain nearby") {
                 typeOf.innerHTML = 'Patchy Rain Nearby'
             }
+        }
         })
 }
 )
 
 function date() {
-    const now = new Date()
-    let hours = now.getHours()
-    const minutes = now.getMinutes().toString().padStart(2, '0')
-    const ampm = hours >= 12 ? 'PM' : 'AM'
+    let now = new Date()
+    let hours = now.getHours().toString().padStart(2, '0')
+    let minutes = now.getMinutes().toString().padStart(2, '0')
+    let ampm = hours >= 12 ? 'PM' : 'AM'
     hours = hours % 12 || 12
 
-    return `${hours.toString().padStart(2, '0')}:${minutes} ${ampm}`
+    return `${hours}:${minutes} ${ampm}`
 }
 
 setInterval(() => {
     document.querySelector('.time').innerHTML = date()
 }, 1000)
+
+function times() {
+let
+}
