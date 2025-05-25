@@ -4,5 +4,4 @@
 
 Note : The vercel link in the repo won't work 🚨
 
-<h1>The [api](https://www.weatherapi.com
-) used in this website.</h1> 
+<h1>The [api](https://www.weatherapi.com) used in this website.</h1> 
