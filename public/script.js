@@ -23,6 +23,10 @@ function weatherUpdate() {
             typeOf.innerHTML = value.current.condition.text
             document.querySelector('#temperature').innerHTML = `${Math.round(value.current.temp_c)}°<span style="font-size: 20px; color: rgb(139, 134, 134);" class="temperature">C</span>`
             document.getElementById('name').innerHTML = `${value.location.name}, ${value.location.country}` 
+            document.querySelector('.dew').innerHTML = `${value.current.dewpoint_c}°C`
+            document.querySelector('.pressure').innerHTML = `↓${value.current.pressure_mb} mb`
+            document.querySelector('.clouds').innerHTML = `${value.current.cloud}%`
+            document.querySelector('.visible').innerHTML = `${value.current.vis_km} km`
 
             let uv = `${Math.round(value.current.uv)}`
             if (uv >= 0 && uv <= 2) {

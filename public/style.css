@@ -150,17 +150,20 @@ input:focus {
 .wind {
     height: 320px;
     width: 315px;
+     font-family: "Merriweather", serif;
 }
 
 #temperature {
     font-family: "Merriweather", serif;
     font-size: 40px;
-    transform: translateX(-136px);
+    transform: translateX(-541px);
 }
 
 .index {
     font-size: 13px;
     font-family: "Merriweather", serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
 .index hr {
@@ -229,4 +232,22 @@ input:focus {
     margin: 0 20px;
     font-family: "Bebas Neue", sans-serif;
     margin-left: -194px;
+}
+
+.right {
+    width: 295px;
+    margin-left: 10px;
+    margin-top: 46px;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+}
+
+.left {
+    width: 295px;
+    font-family: 'Open Sans',sans-serif;
+    font-size: 16px;
+}
+
+.right p,.left p  {
+    transform: translateY(5px);
 }

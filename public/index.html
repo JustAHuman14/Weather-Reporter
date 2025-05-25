@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="A website that tells the current weather...(If there's any inaccuracy then it's not my fault 🙅‍♂️)">
     <title>Weather Reporter</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -58,7 +60,7 @@
         <div class="box">
             <div class="times">
                 <p class="current">Current Weather</p>
-                 <p class="location">Location: <span id="name"></span></p> 
+                <p class="location">Location: <span id="name"></span></p>
                 <p class="time"></p>
             </div>
             <hr>
@@ -67,23 +69,40 @@
                     <p class="cloud"></p>
                     <p id="temperature"></p>
                     <div class="index">
-                        <p style="font-size: 18px" class="typeof"></p><br>
-                        <p class="indi">Max UV Index<span class="uv"></span></p><br>
-                        <hr>
-                        <p class="indi">Wind<span class="win"></span></p><br>
-                        <hr>
-                        <p class="indi">Wind Gusts<span class="gust"></span></p><br>
-                        <hr>
-                        <p class="indi">Humidity<span class="humid"></span></p><br>
-                        <hr>
+                        <div class="left">
+                            <p style="font-size: 18px" class="typeof"></p>
+                            <br>
+                            <p class="indi">Max UV Index<span class="uv"></span></p>
+                            <br>
+                            <hr>
+                            <p class="indi">Wind<span class="win"></span></p>
+                            <br>
+                            <hr>
+                            <p class="indi">Wind Gusts<span class="gust"></span></p>
+                            <br>
+                            <hr>
+                            <p class="indi">Humidity<span class="humid"></span></p>
+                            <br>
+                            <hr>
+                        </div>
+                        <div class="right">
+                            <p class="indi">Dew Point<span class="dew"></span></p>
+                            <br>
+                            <hr>
+                            <p class="indi">Pressure<span class="pressure" style="font-size: 16px;"></span></p>
+                            <br>
+                            <hr>
+                            <p class="indi">Cloud Cover<span class="clouds"></span></p>
+                            <br>
+                            <hr>
+                            <p class="indi">Visibility<span class="visible"></span></p>
+                            <br>
+                            <hr>
+                        </div>
                     </div>
-
                 </div>
                 <div class="wind">
                     <p class="feel"></p>
-                    <div class="index">
-                      
-                    </div>
                 </div>
             </div>
         </div>
