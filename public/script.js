@@ -16,7 +16,10 @@ function weatherUpdate() {
         if (!city.value) {
             weatherBox.style.display = 'none'
             alert('Enter city or region name!')
-        } else {
+        } else if (!value.current) {
+            weatherBox.style.display = 'none'
+            alert('Enter a valid city or region name!')
+        }else {
             weatherBox.style.display = 'block'
             document.querySelector('.feel').innerHTML = `Feels Like ${Math.round(value.current.feelslike_c)}°C`
             document.querySelector('.cloud').innerHTML = `<img src="https:${value.current.condition.icon}" alt="cloudy" width="62" height="62">`
