@@ -8,6 +8,7 @@ let city = document.querySelector('#weather')
 let temp = document.querySelector('#temperature').innerHTML
 let weatherBox = document.querySelector('.box')
 let typeOf = document.querySelector('.typeof')
+let unit = document.getElementById('units')
 
 weatherBox.style.display = 'none'
 
@@ -21,15 +22,25 @@ function weatherUpdate() {
             alert('Enter a valid city or region name!')
         }else {
             weatherBox.style.display = 'block'
-            document.querySelector('.feel').innerHTML = `Feels Like ${Math.round(value.current.feelslike_c)}°C`
+            
             document.querySelector('.cloud').innerHTML = `<img src="https:${value.current.condition.icon}" alt="cloudy" width="62" height="62">`
             typeOf.innerHTML = value.current.condition.text
-            document.querySelector('#temperature').innerHTML = `${Math.round(value.current.temp_c)}°<span style="font-size: 20px; color: rgb(139, 134, 134);" class="temperature">C</span>`
+            
             document.getElementById('name').innerHTML = `${value.location.name}, ${value.location.country}` 
-            document.querySelector('.dew').innerHTML = `${value.current.dewpoint_c}°C`
+            
             document.querySelector('.pressure').innerHTML = `↓${value.current.pressure_mb} mb`
             document.querySelector('.clouds').innerHTML = `${value.current.cloud}%`
             document.querySelector('.visible').innerHTML = `${value.current.vis_km} km`
+
+            if (unit.value == "celsius") {
+                document.querySelector('#temperature').innerHTML = `${Math.round(value.current.temp_c)}°<span style="font-size: 20px; color: rgb(139, 134, 134);" class="temperature">C</span>`
+                document.querySelector('.feel').innerHTML = `Feels Like ${Math.round(value.current.feelslike_c)}°C`
+                document.querySelector('.dew').innerHTML = `${Math.round(value.current.dewpoint_c)}°C`
+            } else {
+                document.querySelector('#temperature').innerHTML = `${Math.round(value.current.temp_f)}°<span style="font-size: 20px; color: rgb(139, 134, 134);" class="temperature">F</span>`
+                document.querySelector('.feel').innerHTML = `Feels Like ${Math.round(value.current.feelslike_f)}°F`
+                document.querySelector('.dew').innerHTML = `${Math.round(value.current.dewpoint_f)}°F`
+            }
 
             let uv = `${Math.round(value.current.uv)}`
             if (uv >= 0 && uv <= 2) {
