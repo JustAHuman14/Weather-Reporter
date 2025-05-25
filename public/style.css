@@ -19,7 +19,6 @@ nav {
     -webkit-backdrop-filter: blur(10px);
     padding: 5px 10px;
     position: sticky;
-    top: 0;
     z-index: 1000;
 }
 
@@ -118,6 +117,7 @@ input:focus {
 }
 
 .current {
+    margin-left: -9px;
     height: 30px;
     display: flex;
     align-items: center;
@@ -130,12 +130,16 @@ input:focus {
     height: 30px;
     display: flex;
     align-items: center;
-    margin-left: 450px;
     font-family: "Bebas Neue", sans-serif;
 }
 
 .times {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .realwea {
@@ -161,7 +165,7 @@ input:focus {
 #temperature {
     font-family: "Merriweather", serif;
     font-size: 40px;
-    transform: translateX(-95px);
+    transform: translateX(-136px);
 }
 
 .index {
@@ -183,46 +187,57 @@ input:focus {
     width: 200px;
 }
 
-.click:hover{
+.click:hover {
     cursor: pointer;
 }
 
 .search {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  background-color: white;
-  padding: 0.75rem 1rem;
-  border-radius: 2rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  max-width: 350px;
-  margin: 1rem auto;
-  transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    padding: 0.75rem 1rem;
+    border-radius: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    margin: 1rem auto;
+    transition: background-color 0.3s ease;
 }
 
 .search svg {
-  flex-shrink: 0;
-  cursor: pointer;
+    flex-shrink: 0;
+    cursor: pointer;
 }
 
 #weather {
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
 }
 
 .search button {
-  background-color: #4f46e5; 
-  color: white;
-  border: none;
-  padding: 12px 14px;
-  border-radius: 1.5rem;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background-color 0.2s ease;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 12px 14px;
+    border-radius: 1.5rem;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
 }
 
 .search button:hover {
-  background-color: #4338ca;
+    background-color: #4338ca;
+}
+
+.times {
+    margin-top: 10px;
+}
+
+.location {
+    text-align: center;
+    margin: 0 20px;
+    font-family: "Bebas Neue", sans-serif;
+    margin-left: -194px;
 }

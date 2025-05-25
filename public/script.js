@@ -11,18 +11,18 @@ let typeOf = document.querySelector('.typeof')
 
 weatherBox.style.display = 'none'
 
-document.querySelector('#search').addEventListener('click', () => {
-        weather(city.value).then((value) => {
-            if (!city.value) {
-                weatherBox.style.display = 'none'
-                alert('Enter city or region name!')
-            } else {
-                
-                weatherBox.style.display = 'block'
-                document.querySelector('.feel').innerHTML = `Feels Like ${Math.round(value.current.feelslike_c)}°C`
-                document.querySelector('.cloud').innerHTML = `<img src="https:${value.current.condition.icon}" alt="cloudy" width="62" height="62">`
+function weatherUpdate() {
+    weather(city.value).then((value) => {
+        if (!city.value) {
+            weatherBox.style.display = 'none'
+            alert('Enter city or region name!')
+        } else {
+            weatherBox.style.display = 'block'
+            document.querySelector('.feel').innerHTML = `Feels Like ${Math.round(value.current.feelslike_c)}°C`
+            document.querySelector('.cloud').innerHTML = `<img src="https:${value.current.condition.icon}" alt="cloudy" width="62" height="62">`
             typeOf.innerHTML = value.current.condition.text
             document.querySelector('#temperature').innerHTML = `${Math.round(value.current.temp_c)}°<span style="font-size: 20px; color: rgb(139, 134, 134);" class="temperature">C</span>`
+            document.getElementById('name').innerHTML = `${value.location.name}, ${value.location.country}` 
 
             let uv = `${Math.round(value.current.uv)}`
             if (uv >= 0 && uv <= 2) {
@@ -93,9 +93,17 @@ document.querySelector('#search').addEventListener('click', () => {
                 typeOf.innerHTML = 'Patchy Rain Nearby'
             }
         }
-        })
+    })
 }
-)
+
+city.addEventListener('keydown', (e) => {
+    if (e.code == "Enter") {
+        weatherUpdate()
+    }
+})
+document.querySelector('#search').addEventListener('click', () => {
+    weatherUpdate()
+})
 
 function date() {
     let now = new Date()
@@ -110,7 +118,3 @@ function date() {
 setInterval(() => {
     document.querySelector('.time').innerHTML = date()
 }, 1000)
-
-function times() {
-let
-}
