@@ -150,7 +150,7 @@ input:focus {
 .wind {
     height: 320px;
     width: 315px;
-     font-family: "Merriweather", serif;
+    font-family: "Merriweather", serif;
 }
 
 #temperature {
@@ -238,30 +238,344 @@ input:focus {
     width: 295px;
     margin-left: 10px;
     margin-top: 46px;
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 }
 
 .left {
     width: 295px;
-    font-family: 'Open Sans',sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
 }
 
-.right p,.left p  {
+.right p,
+.left p {
     transform: translateY(5px);
 }
 
 select {
-      padding: 6px 10px;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: white;
-  cursor: pointer;
-  transition: border 0.2s ease;
+    padding: 6px 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+    cursor: pointer;
+    transition: border 0.2s ease;
 
-  &:hover{
-    border-color: #888;
-  }
+    &:hover {
+        border-color: #888;
+    }
+}
+
+pre {
+    font-family: "Merriweather", serif;
+    font-size: 14px;
+}
+
+@media only screen and (max-width: 620px) {
+     .box {
+        background-color: white;
+        height: 450px;
+        width: 520px;
+        margin-top: 20px;
+    }
+
+    .index {
+        font-family: "Merriweather", serif;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 320px;
+        margin-left: -9px;
+        padding-left: 29px;
+    }
+
+    .right {
+        width: 295px;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+    }
+
+    .left {
+        width: 295px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 15px;
+    }
+
+    #temperature {
+        font-family: "Merriweather", serif;
+        font-size: 40px;
+        transform: translateX(-274px);
+    }
+
+    .wind {
+        height: 0px;
+        width: 0px;
+        transform: translateX(-114px) translateY(-140px);
+    }
+
+    pre {
+        font-family: "Merriweather", serif;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 520px) {
+     .box {
+        background-color: white;
+        height: 435px;
+        width: 440px;
+        margin-top: 20px;
+    }
+
+    .index {
+        font-family: "Merriweather", serif;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 320px;
+        margin-left: -9px;
+        padding-left: 29px;
+    }
+
+    .right {
+        width: 295px;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    .left {
+        width: 295px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    #temperature {
+        font-family: "Merriweather", serif;
+        font-size: 40px;
+        transform: translateX(-274px);
+    }
+
+    .wind {
+        height: 0px;
+        width: 0px;
+        transform: translateX(-114px) translateY(-140px);
+    }
+
+    pre {
+        font-family: "Merriweather", serif;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .box {
+        background-color: white;
+        height: 435px;
+        width: 390px;
+        margin-top: 20px;
+    }
+
+    .index {
+        font-family: "Merriweather", serif;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 320px;
+        margin-left: -9px;
+        padding-left: 29px;
+    }
+
+    .right {
+        width: 295px;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    .left {
+        width: 295px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    #temperature {
+        font-family: "Merriweather", serif;
+        font-size: 40px;
+        transform: translateX(-274px);
+    }
+
+    .wind {
+        height: 0px;
+        width: 0px;
+        transform: translateX(-114px) translateY(-140px);
+    }
+
+    pre {
+        font-family: "Merriweather", serif;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .box {
+        background-color: white;
+        height: 435px;
+        width: 390px;
+        margin-top: 20px;
+    }
+
+    .index {
+        font-family: "Merriweather", serif;
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 320px;
+        margin-left: -9px;
+        padding-left: 29px;
+    }
+
+    .right {
+        width: 295px;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    .left {
+        width: 295px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    #temperature {
+        font-family: "Merriweather", serif;
+        font-size: 40px;
+        transform: translateX(-274px);
+    }
+
+    .wind {
+        height: 0px;
+        width: 0px;
+        transform: translateX(-114px) translateY(-140px);
+    }
+
+    pre {
+        font-family: "Merriweather", serif;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .box {
+        background-color: white;
+        height: 435px;
+        width: 350px;
+        margin-top: 20px;
+    }
+
+    .index {
+        font-family: "Merriweather", serif;
+        width: 320px;
+        margin-left: -9px;
+        padding-left: 29px;
+    }
+
+    .right {
+        width: 295px;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    .left {
+        width: 295px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    #temperature {
+        font-family: "Merriweather", serif;
+        font-size: 40px;
+        transform: translateX(-274px);
+    }
+
+    .wind {
+        height: 0px;
+        width: 0px;
+        transform: translateX(-114px) translateY(-140px);
+    }
+
+    pre {
+        font-family: "Merriweather", serif;
+        font-size: 14px;
+    }
+    .search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    max-width: 320px;
+}
+}
+
+@media only screen and (max-width: 360px) {
+    .box {
+        background-color: white;
+        height: 435px;
+        width: 340px;
+        margin-top: 20px;
+    }
+
+    .index {
+        font-family: "Merriweather", serif;
+        width: 320px;
+        padding-left: 19px;
+    }
+
+    .right {
+        width: 295px;
+        margin-left: 0px;
+        margin-top: 0px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    .left {
+        width: 295px;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 14px;
+    }
+
+    #temperature {
+        font-family: "Merriweather", serif;
+        font-size: 40px;
+        transform: translateX(-274px);
+    }
+
+    .wind {
+        height: 0px;
+        width: 0px;
+        transform: translateX(-114px) translateY(-140px);
+    }
+
+    pre {
+        font-family: "Merriweather", serif;
+        font-size: 14px;
+    }
+
+    .search {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background-color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        max-width: 310px;
+    }
 }
