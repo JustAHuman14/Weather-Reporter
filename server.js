@@ -5,6 +5,8 @@ require('dotenv').config()
 
 app.use(express.static('public'))
 
+app.use(express.json())
+
 app.get('/api/weather', async (req, res) => {
     const city = req.query.city;
     const apiKey = process.env.API_KEY;
@@ -13,6 +15,10 @@ app.get('/api/weather', async (req, res) => {
     const response = await fetch(url);
     const data = await response.json();
     res.json(data);
+})
+
+app.post('/api', (req,res) => {
+    console.log(req.body)
 })
 
 app.listen(port, () => {

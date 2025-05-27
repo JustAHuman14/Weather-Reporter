@@ -20,14 +20,14 @@ function weatherUpdate() {
         } else if (!value.current) {
             weatherBox.style.display = 'none'
             alert('Enter a valid city or region name!')
-        }else {
+        } else {
             weatherBox.style.display = 'block'
-            
+
             document.querySelector('.cloud').innerHTML = `<img src="https:${value.current.condition.icon}" alt="cloudy" width="62" height="62">`
             typeOf.innerHTML = value.current.condition.text
-            
-            document.getElementById('name').innerHTML = `${value.location.name}, ${value.location.country}` 
-            
+
+            document.getElementById('name').innerHTML = `${value.location.name}, ${value.location.country}`
+
             document.querySelector('.pressure').innerHTML = `↓${value.current.pressure_mb} mb`
             document.querySelector('.clouds').innerHTML = `${value.current.cloud}%`
             document.querySelector('.visible').innerHTML = `${value.current.vis_km} km`
@@ -117,10 +117,28 @@ function weatherUpdate() {
 city.addEventListener('keydown', (e) => {
     if (e.code == "Enter") {
         weatherUpdate()
+        fetch('/api', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify({
+                'search': city.value
+            })
+        })
     }
 })
 document.querySelector('#search').addEventListener('click', () => {
     weatherUpdate()
+    fetch('/api', {
+        method: 'POST',
+        headers: {
+            'Content-type': 'application/json'
+        },
+        body: JSON.stringify({
+            'search': city.value
+        })
+    })
 })
 
 function date() {
