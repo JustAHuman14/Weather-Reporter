@@ -14,6 +14,7 @@ app.get('/api/weather', async (req, res) => {
 
     const response = await fetch(url);
     const data = await response.json();
+    console.log(req.ip)
     res.json(data);
 })
 
