@@ -15,6 +15,7 @@ app.get('/api/weather', async (req, res) => {
     const response = await fetch(url);
     const data = await response.json();
     const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket?.remoteAddress 
+    console.log(ip)
     res.json(data);
 })
 
