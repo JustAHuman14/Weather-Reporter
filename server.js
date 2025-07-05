@@ -14,11 +14,11 @@ app.get('/api/weather', async (req, res) => {
 
     const response = await fetch(url);
     const data = await response.json();
-    console.log(req.ip)
+    const ip = req.headers['x-forwarded-for']?.split(',')[0] || req.socket?.remoteAddress 
     res.json(data);
 })
 
-app.post('/api', (req,res) => {
+app.post('/api', (req, res) => {
     console.log(req.body)
 })
 
